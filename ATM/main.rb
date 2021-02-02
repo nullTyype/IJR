@@ -4,11 +4,56 @@ def welcome
     value
 end
 
-storage = {m100 => 1, m50 => 2, m20 => 4, m10 => 8, m5 => 16, m1 => 32}
+storage = {100 => 1, 50 => 2, 20 => 4, 10 => 8, 5 => 16, 1 => 32}
 
 value = welcome
 
-
-def atm(value)
-    
+=begin
+def atm(value,storage)
+    change = []
+    if value - 100 > 0
+        value -= 100
+        puts value
+        change << 100
+        puts "Your change is #{change}"
+    elsif
+    end
 end
+=end
+
+def atm(value,storage)
+    change = []
+    case value 
+    when value -100 > 0
+        
+    when  value -50 > 0
+    
+    when value -20 > 0
+    
+    when value -10 > 0 
+    
+    when value -5 > 0 
+    
+    when -1
+    
+    else 
+    
+    end
+end
+case value 
+when value -100 > 0
+    
+when  value -50 > 0
+
+when value -20 > 0
+
+when value -10 > 0 
+
+when value -5 > 0 
+
+when -1
+
+else 
+
+end
+atm(value,storage)
