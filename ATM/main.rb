@@ -24,36 +24,37 @@ end
 def atm(value,storage)
     change = []
     case value 
-    when value -100 > 0
-        
-    when  value -50 > 0
-    
-    when value -20 > 0
-    
-    when value -10 > 0 
-    
-    when value -5 > 0 
-    
-    when -1
-    
+    when value -100 >= 0
+        change << 100
+        value -= 100
+        puts "Your actual change is #{change}"
+        sleep 0.5
+    when  value -50 >= 0
+        change << 50
+        value -= 50
+        puts "Your actual change is #{change}"
+        sleep 0.5
+    when value -20 >= 0
+        change << 20
+        value -= 20
+        puts "Your actual change is #{change}"
+        sleep 0.5
+    when value -10 >= 0 
+        change << 10
+        value -= 10
+        puts "Your actual change is #{change}"
+        sleep 0.5
+    when value -5 >= 0 
+        change << 5
+        value -= 5
+        puts "Your actual change is #{change}"
+        sleep 0.5
+    when value -1 >= 0
+        change << 1
+        value -= 1
     else 
-    
+        "Write a valid value"
     end
 end
-case value 
-when value -100 > 0
-    
-when  value -50 > 0
 
-when value -20 > 0
-
-when value -10 > 0 
-
-when value -5 > 0 
-
-when -1
-
-else 
-
-end
 atm(value,storage)
