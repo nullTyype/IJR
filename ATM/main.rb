@@ -39,8 +39,7 @@ def atm(value,storage)
         elsif value -1 >= 0
             change << 1
             value -= 1
-        else 
-            "Write a valid value"
+            puts "Your actual change is #{change}"
         end
     end
 end
