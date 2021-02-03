@@ -8,31 +8,19 @@ storage = {100 => 1, 50 => 2, 20 => 4, 10 => 8, 5 => 16, 1 => 32}
 
 value = welcome
 
-def atm(value,storage)
+changes = [100,50,20,10,5,1]
+
+def atm(value,storage,changes)
     change = []
+    i = 0
     while value > 0
-        if value -100 >= 0
-            change << 100
-            value -= 100
-        elsif value -50 >= 0
-            change << 50
-            value -= 50
-        elsif value -20 >= 0
-            change << 20
-            value -= 20
-        elsif value -10 >= 0 
-            change << 10
-            value -= 10
-        elsif value -5 >= 0 
-            change << 5
-            value -= 5
-        elsif value -1 >= 0
-            change << 1
-            value -= 1
+        while value - changes[i] >= 0
+            value -= changes[i]
+            change << changes[i]
         end
+        i+=1
     end
     puts "Your change is #{change}"
 end
 
-
-atm(value,storage)
+atm(value,storage,changes)
