@@ -1,5 +1,5 @@
 def welcome(storage)
-    puts "Welcome, write a value to be drawed: "
+    puts "Write a value to be drawed: "
     value = gets.to_i
     value
 end
