@@ -1,7 +1,7 @@
-def welcome
+def welcome(storagew)
     puts "Welcome, write a value to be drawed: "
-    puts  "Our current storage is #{storage}"
     value = gets.to_i
+    puts  "Our current storage is #{storage}"
     value
 end
 
@@ -27,4 +27,3 @@ loop do
 end
 
 atm(value,storage,changes)
-puts storage.to_h
