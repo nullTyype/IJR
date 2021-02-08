@@ -1,6 +1,6 @@
 def welcome
     puts "Welcome, write a value to be drawed: "
-    puts  "" 
+    puts  "Our current storage is #{storage}"
     value = gets.to_i
     value
 end
@@ -8,8 +8,8 @@ end
 #storage = {100 => 1, 50 => 2, 20 => 4, 10 => 8, 5 => 16, 1 => 32} <- (.to_a) hash to array convention
 
 loop do
-    storage = [[100, 1],[50, 2],[20, 4],[10,8],[5, 16],[1, 32]]
-    value = welcome
+    storage = [[100, 1],[50, 2],[20, 4],[10, 8],[5, 16],[1, 32]]
+    value = welcome(storage)
 
     def atm(value,storage,changes)
         change = []
