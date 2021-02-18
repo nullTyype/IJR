@@ -16,7 +16,7 @@ def atm(storage)
                 storage[i][1] -= 1
                 change << storage[i][0]
             else
-                puts "You exceed the max value"
+                puts "You exceeded the max value"
             end
         end
         i+=1
