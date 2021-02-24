@@ -2,13 +2,16 @@ char = File.read("entrada.txt")
 
 i = 0
 k = 1
-for i in 0..char.length 
+length = char.length-1
+for i in 0..length
     if char[i] == char[i+1]
         puts "#{k}#{char[i]}"
         k+=1
         i+=1
-    elsif char[i] != char[i+1]
+    elsif char[i+1] == nil
         puts "#{k}#{char[i]}"
-        k = 0
+    else
+        puts "#{k}#{char[i]}"
+        k = 1
     end
 end 
