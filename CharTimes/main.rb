@@ -8,8 +8,6 @@ for i in 0..length
         puts "#{k}#{char[i]}"
         k+=1
         i+=1
-    elsif char[i+1] == nil
-        puts "#{k}#{char[i]}"
     else
         puts "#{k}#{char[i]}"
         k = 1
