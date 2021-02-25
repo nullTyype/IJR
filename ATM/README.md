@@ -1,3 +1,3 @@
 # ATM
 
-ATM machine logic.
+ATM machine logic, to test just do a ruby main.rb!
