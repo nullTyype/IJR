@@ -7,13 +7,25 @@ File.write("output.txt","", mode: "w")
 for i in 0..length
     str = ""
 
-    if char[i] == char[i+1]
-        str << "#{k}#{char[i]} \s"
-        k+=1
-        i+=1
+    if char[i].class == "String"
+        if char[i] == char[i+1]
+            #str << "#{k}#{char[i]} \s"
+            k+=1
+            i+=1
+        else
+            str << "#{k}#{char[i]} \s"
+            k = 1
+        end
     else
-        str << "#{k}#{char[i]} \s"
-        k = 1
+        if char[i] == char[i+1]
+            #str << "#{k}-#{char[i]} \s"
+            k+=1
+            i+=1
+        else
+            str << "#{k}-#{char[i]} \s"
+            k = 1
+        end
     end
+
     File.write("output.txt","#{str}", mode: "a")
 end 
