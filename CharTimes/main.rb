@@ -9,7 +9,6 @@ for i in 0..length
 
     if char[i].match(/[[:alpha:]]/)
         if char[i] == char[i+1]
-            #str << "#{k}#{char[i]} \s"
             k+=1
             i+=1
         else
@@ -18,7 +17,6 @@ for i in 0..length
         end
     else
         if char[i] == char[i+1]
-            #str << "#{k}-#{char[i]} \s"
             k+=1
             i+=1
         else
