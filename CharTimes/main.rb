@@ -7,7 +7,7 @@ File.write("output.txt","", mode: "w")
 for i in 0..length
     str = ""
 
-    if char[i].class == "String"
+    if char[i].match(/[[:alpha:]]/)
         if char[i] == char[i+1]
             #str << "#{k}#{char[i]} \s"
             k+=1
