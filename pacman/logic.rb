@@ -8,7 +8,10 @@ end
 
 def play(name)
     map = read_map(1)
-    draw(map)
+    while true
+        draw(map)
+        direction = require_move
+    end
 end
 
 def init
