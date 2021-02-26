@@ -4,7 +4,7 @@ def welcome
     name = "defaultUser"
     puts "\n\n\n\n"
     puts "The game is starting"
-    sleep 0.5
+    sleep 0.3
     name
 end
 
