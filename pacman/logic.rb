@@ -11,7 +11,7 @@ def find_hero(map)
     map.each_with_index do |current_line, line|
         current_line = map[line]
         hero_column = current_line.index(hero)
-        if hero_column != -1
+        if hero_column
             return [line,hero_column]
         end
     end
