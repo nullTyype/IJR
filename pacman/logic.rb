@@ -7,9 +7,13 @@ def read_map(number)
 end
 
 def find_player(map)
-    for line = 0..(map.size)-1
+    for line in 0..(map.size)-1
         if map[line].include?("H")
-            #find
+            for column in (0..map[line].size-1)
+                if map[line][column] == "H"
+                    #find
+                end
+            end
         end
     end
     #didnt find
