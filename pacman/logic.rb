@@ -7,10 +7,11 @@ def read_map(number)
 end
 
 def find_player(map)
-    for line in 0..(map.size)-1
+    hero = "H"
+    for line in 0..(map.size-1)
         if map[line].include?("H")
             for column in (0..map[line].size-1)
-                if map[line][column] == "H"
+                if map[line][column] == hero
                     #find
                 end
             end
