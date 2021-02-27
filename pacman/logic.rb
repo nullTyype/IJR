@@ -6,6 +6,15 @@ def read_map(number)
     map = text.split("\n")
 end
 
+def find_player(map)
+    for line = 0..(map.size)-1
+        if map[line].include?("H")
+            #find
+        end
+    end
+    #didnt find
+end
+
 def play(name)
     map = read_map(1)
     while true
