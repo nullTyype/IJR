@@ -9,12 +9,10 @@ end
 def find_player(map)
     hero = "H"
     for line in 0..(map.size-1)
-        if map[line].include?("H")
-            for column in (0..map[line].size-1)
-                if map[line][column] == hero
-                    #find
-                end
-            end
+        current_line = map[line]
+        hero_column = current_line[column].index(hero)
+        if hero_column
+            #find
         end
     end
     #didnt find
