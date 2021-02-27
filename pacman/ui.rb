@@ -3,7 +3,7 @@ def welcome
     puts "Your name is? "
     name = "defaultUser"
     puts "\n\n\n\n"
-    puts "The game is starting"
+    puts "The game is starting #{name}"
     sleep 0.3
     name
 end
