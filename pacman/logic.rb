@@ -8,10 +8,10 @@ end
 
 def find_player(map)
     hero = "H"
-    for line in 0..(map.size-1)
+    map.each_with_index do |current_line, line|
         current_line = map[line]
         hero_column = current_line[column].index(hero)
-        if hero_column
+        if hero_column != -1
             #find
         end
     end
