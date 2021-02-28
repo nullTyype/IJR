@@ -18,6 +18,21 @@ def find_hero(map)
     #didnt find
 end
 
+def compute_new_pos(hero, direction)
+    hero = hero.dup
+    case direction
+    when "W"
+        hero[0] -=1
+    when "S"
+        hero[0] +=1
+    when "A"
+        hero[1] -=1
+    when "D"
+        hero[1] +=1
+    end
+    hero
+end
+
 def play(name)
     map = read_map(1)
     while true
@@ -25,17 +40,10 @@ def play(name)
         direction = require_move.upcase
         hero = find_hero(map)
         map[hero[0]] [hero[1]] = " "
-        case direction
-            when "W"
-                hero[0] -=1
-            when "S"
-                hero[0] +=1
-            when "A"
-                hero[1] -=1
-            when "D"
-                hero[1] +=1
-        end
-        map[hero[0]][hero[1]] = "H"
+        new_pos = compute_new_pos(hero, direction)
+        puts "Before: #{hero}"
+        puts "After #{new_pos}"
+        map[new_pos[0]][new_pos[1]] = "H"
     end
 end
 
