@@ -39,11 +39,24 @@ def play(name)
         draw(map)
         direction = require_move.upcase
         hero = find_hero(map)
-        map[hero[0]] [hero[1]] = " "
         new_pos = compute_new_pos(hero, direction)
-        puts "Before: #{hero}"
-        puts "After #{new_pos}"
-        map[new_pos[0]][new_pos[1]] = "H"
+        if new_pos[0] < 0 
+            next
+        end
+        if new_pos[1] < 0
+            next
+        end
+        if new_pos[0] >= map.size
+            next
+        end
+        if new_pos[1] >= map[0].size
+            next
+        end 
+        if map[new_pos[0]] [new_pos[1]] == "X"
+            next
+        end
+        map[hero[0]] [hero[1]] = " "
+        map[new_pos[0]] [new_pos[1]] = "H"
     end
 end
 
