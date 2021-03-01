@@ -20,22 +20,15 @@ end
 
 def compute_new_pos(hero, direction)
     hero = hero.dup
-    case direction
-    when "W"
-        traveled_line += -1
-        traveled_column += 0
-    when "S"
-        traveled_line += 1
-        traveled_column += 0
-    when "A"
-        traveled_line += 0
-        traveled_column += -1
-    when "D"
-        traveled_line += 0
-        traveled_column += 1
-    end
-    hero[0] += traveled_line
-    hero[1] += traveled_column
+    moviments = {
+        "W" => [-1, 0],
+        "S" => [1, 0],
+        "A" => [0, -1],
+        "D" => [0, 1]
+    }
+    moviment = moviments[direction]
+    hero[0] += moviment[0]
+    hero[1] += moviment[1]
     hero
 end
 
@@ -50,7 +43,7 @@ def valid_pos?(map, pos)
         return false
     end
 
-    if map[pos[0] [pos[1]] == "X"
+    if map[pos[0]] [pos[1]] == "X"
         return false
     end
     true
