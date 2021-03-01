@@ -33,6 +33,19 @@ def compute_new_pos(hero, direction)
     hero
 end
 
+def valid_pos?(map, new_pos) 
+    if new_pos[0] < 0 || new_pos[0] >= map.size
+        return false
+    end
+    if new_pos[1] < 0 || new_pos[1] >= map.size-1
+        return false
+    end
+    if map[new_pos[0] [new_pos[1]] == "X"
+        return false
+    end
+    true
+end
+
 def play(name)
     map = read_map(1)
     while true
@@ -41,21 +54,7 @@ def play(name)
         direction = require_move.upcase
         hero = find_hero(map)
         new_pos = compute_new_pos(hero, direction)
-        if new_pos[0] < 0 
-            next
-        end
-        if new_pos[1] < 0
-            next
-        end
-        if new_pos[0] >= map.size
-            next
-        end
-        if new_pos[1] >= map[0].size-1
-            next
-        end 
-        if map[new_pos[0]] [new_pos[1]] == "X"
-            next
-        end
+        #valid_pos?
         map[hero[0]] [hero[1]] = " "
         map[new_pos[0]] [new_pos[1]] = "H"
     end
