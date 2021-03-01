@@ -37,6 +37,7 @@ def play(name)
     map = read_map(1)
     while true
         draw(map)
+        puts "\n"
         direction = require_move.upcase
         hero = find_hero(map)
         new_pos = compute_new_pos(hero, direction)
