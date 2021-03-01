@@ -55,10 +55,23 @@ def valid_pos_from(map, pos)
     if valid_pos? down
         positions << down
     end
+    right = map[pos[0]][pos[1] +1]
+    if valid_pos? right
+        positions << right
+    end
+    up = map[pos[0] -1][pos[1]]
+    if valid_pos? up
+        positions << up
+    end
+    left = map[pos[0]][pos[1] -1]
+    if valid_pos? left
+        positions << left
+    end
+    positions
 end
 
 def move_ghost(map, line, column)
-    pos = [line, column +1]
+    posititons = valid_pos_from(map, pos)
     if valid_pos?(map, pos)
         map[line][column] = " "
         map[pos[0]][pos[1]] = "F"
