@@ -50,10 +50,11 @@ def valid_pos?(map, pos)
 end
 
 def move_ghost(map, line, column)
-    map[line][column] = " "
-    line +=0
-    column +=1
-    map[line][column] = "F"
+    pos = [line, column +1]
+    if valid_pos?(map, pos)
+        map[line][column] = " "
+        map[pos[0]][pos[1]] = "F"
+    end
 end
 
 def move_ghosts(map)
