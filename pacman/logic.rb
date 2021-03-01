@@ -22,14 +22,20 @@ def compute_new_pos(hero, direction)
     hero = hero.dup
     case direction
     when "W"
-        hero[0] -=1
+        traveled_line += -1
+        traveled_column += 0
     when "S"
-        hero[0] +=1
+        traveled_line += 1
+        traveled_column += 0
     when "A"
-        hero[1] -=1
+        traveled_line += 0
+        traveled_column += -1
     when "D"
-        hero[1] +=1
+        traveled_line += 0
+        traveled_column += 1
     end
+    hero[0] += traveled_line
+    hero[1] += traveled_column
     hero
 end
 
