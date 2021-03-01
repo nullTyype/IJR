@@ -49,15 +49,29 @@ def valid_pos?(map, pos)
     true
 end
 
-def move_ghosts
-    
+def move_ghost(map, line, column)
+    map[line][column] = " "
+    line +=0
+    column +=1
+    map[line][column] = "F"
+end
+
+def move_ghosts(map)
+    ghost = "F"
+    map.each_with_index do |current_line, line|
+        current_line.chars.each_with_index do |current_char, column|
+            is_ghost = current_char == ghost
+            if is_ghost
+                move_ghost(map, line, column)
+            end 
+        end
+    end
 end
 
 def play(name)
     map = read_map(2)
     while true
         draw(map)
-        puts "\n"
         direction = require_move.upcase
         hero = find_hero(map)
         new_pos = compute_new_pos(hero, direction)
