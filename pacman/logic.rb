@@ -42,7 +42,7 @@ def valid_pos?(map, pos)
         return false
     end
 
-    local_value = map[pos[0][pos[1]]]
+    local_value = map[pos[0]][pos[1]]
     if local_value == "X" || local_value == "F"
         return false
     end
