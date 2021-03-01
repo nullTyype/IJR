@@ -49,8 +49,12 @@ def valid_pos?(map, pos)
     true
 end
 
+def move_ghosts
+    
+end
+
 def play(name)
-    map = read_map(1)
+    map = read_map(2)
     while true
         draw(map)
         puts "\n"
@@ -62,6 +66,8 @@ def play(name)
         end
         map[hero[0]] [hero[1]] = " "
         map[new_pos[0]] [new_pos[1]] = "H"
+
+        move_ghosts(map)
     end
 end
 
