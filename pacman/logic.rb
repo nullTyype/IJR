@@ -50,7 +50,7 @@ def play(name)
         if new_pos[0] >= map.size
             next
         end
-        if new_pos[1] >= map[0].size
+        if new_pos[1] >= map[0].size-1
             next
         end 
         if map[new_pos[0]] [new_pos[1]] == "X"
