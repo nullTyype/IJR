@@ -49,6 +49,14 @@ def valid_pos?(map, pos)
     true
 end
 
+def valid_pos_from(map, pos)
+    positions = []
+    down = map[pos[0] +1][pos[1]]
+    if valid_pos? down
+        positions << down
+    end
+end
+
 def move_ghost(map, line, column)
     pos = [line, column +1]
     if valid_pos?(map, pos)
