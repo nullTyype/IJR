@@ -15,7 +15,6 @@ def find_hero(map)
             return [line,hero_column]
         end
     end
-    #didnt find
 end
 
 def compute_new_pos(hero, direction)
@@ -43,7 +42,8 @@ def valid_pos?(map, pos)
         return false
     end
 
-    if map[pos[0]] [pos[1]] == "X"
+    local_value = map[pos[0][pos[1]]]
+    if local_value == "X" || local_value == "F"
         return false
     end
     true
