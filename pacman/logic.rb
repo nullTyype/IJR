@@ -52,30 +52,33 @@ end
 def valid_pos_from(map, pos)
     positions = []
     down = map[pos[0] +1][pos[1]]
-    if valid_pos? down
+    if valid_pos?(map, down)
         positions << down
     end
     right = map[pos[0]][pos[1] +1]
-    if valid_pos? right
+    if valid_pos?(map, right)
         positions << right
     end
     up = map[pos[0] -1][pos[1]]
-    if valid_pos? up
+    if valid_pos?(map, up)
         positions << up
     end
     left = map[pos[0]][pos[1] -1]
-    if valid_pos? left
+    if valid_pos?(map, left)
         positions << left
     end
     positions
 end
 
 def move_ghost(map, line, column)
-    posititons = valid_pos_from(map, pos)
-    if valid_pos?(map, pos)
-        map[line][column] = " "
-        map[pos[0]][pos[1]] = "F"
+    posititons = valid_pos_from(map, [line, column])
+    if positions.empty?
+        return
     end
+    pos = positions[0]
+
+    map[line][column] = " "
+    map[pos[0]][pos[1]] = "F"
 end
 
 def move_ghosts(map)
