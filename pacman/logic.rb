@@ -52,6 +52,11 @@ end
 def valid_pos_from(map, pos)
     positions = []
     down = map[pos[0] +1][pos[1]]
+    puts "#{map[pos[0] +1][pos[1]]}"
+    puts "pos #{pos}"
+    puts "pos[0] #{pos[0]}"
+    puts "pos[1] #{pos[1]}"
+    puts "down #{down}"
     if valid_pos?(map, down)
         positions << down
     end
@@ -71,7 +76,8 @@ def valid_pos_from(map, pos)
 end
 
 def move_ghost(map, line, column)
-    posititons = valid_pos_from(map, [line, column])
+    positions = valid_pos_from(map, [line, column])
+
     if positions.empty?
         return
     end
