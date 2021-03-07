@@ -52,13 +52,6 @@ end
 def valid_pos_from(map, pos)
     positions = []
     down = [pos[0]+1,pos[1]]
-=begin
-    puts "down #{down}"
-    puts "map[0]+1 #{map[pos[0]+1][pos[1]]}"
-    puts "map[0][1] #{map[pos[0]][pos[1]]}"
-    puts "pos #{pos}"
-    puts "down[0] #{down[0]}"
-=end
     if valid_pos?(map, down)
         positions << down
     end
