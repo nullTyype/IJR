@@ -83,7 +83,7 @@ def move_ghost(map, new_map, line, column)
     pos = positions[0]
 
     map[line][column] = " "
-    map[pos[0]][pos[1]] = "F"
+    new_map[pos[0]][pos[1]] = "F"
 end
 
 def move_ghosts(map)
