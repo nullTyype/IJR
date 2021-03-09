@@ -50,12 +50,7 @@ def valid_pos?(map, pos)
 end
 
 def copy_map(map)
-    new_map = []
-    map.each do |line|
-        new_line = line.dup.tr "F", " "
-        new_map << new_line
-    end
-    new_map
+    new_map = map.join("\n").tr("F", " ").join("\n") 
 end
 
 def valid_pos_from(map, pos)
