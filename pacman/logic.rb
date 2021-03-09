@@ -50,7 +50,7 @@ def valid_pos?(map, pos)
 end
 
 def copy_map(map)
-    new_map = map.join("\n").tr("F", " ").join("\n") 
+    new_map = map.join("\n").tr("F", " ").split("\n") 
 end
 
 def valid_pos_from(map, new_map, pos)
@@ -75,7 +75,7 @@ def valid_pos_from(map, new_map, pos)
 end
 
 def move_ghost(map, new_map, line, column)
-    positions = valid_pos_from(map, new_pos, [line, column])
+    positions = valid_pos_from(map, new_map, [line, column])
 
     if positions.empty?
         return
