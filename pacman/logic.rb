@@ -49,6 +49,15 @@ def valid_pos?(map, pos)
     true
 end
 
+def copy_map(map)
+    new_map = []
+    map.each do |line|
+        new_line = line.dup.tr "F", " "
+        new_map << new_line
+    end
+    new_map
+end
+
 def valid_pos_from(map, pos)
     positions = []
     down = [pos[0]+1,pos[1]]
