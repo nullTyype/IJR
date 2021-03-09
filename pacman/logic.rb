@@ -74,8 +74,8 @@ def valid_pos_from(map, pos)
     positions
 end
 
-def move_ghost(map, line, column)
-    positions = valid_pos_from(map, [line, column])
+def move_ghost(map, new_map, line, column)
+    positions = valid_pos_from(map, new_pos, [line, column])
 
     if positions.empty?
         return
