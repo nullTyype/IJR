@@ -88,11 +88,12 @@ end
 
 def move_ghosts(map)
     ghost = "F"
+    new_map = copy_map(map)
     map.each_with_index do |current_line, line|
         current_line.chars.each_with_index do |current_char, column|
             is_ghost = current_char == ghost
             if is_ghost
-                move_ghost(map, line, column)
+                move_ghost(map, new_map, line, column)
             end 
         end
     end
