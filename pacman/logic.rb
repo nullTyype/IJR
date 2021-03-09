@@ -53,21 +53,21 @@ def copy_map(map)
     new_map = map.join("\n").tr("F", " ").join("\n") 
 end
 
-def valid_pos_from(map, pos)
+def valid_pos_from(map, new_map, pos)
     positions = []
     down = [pos[0]+1,pos[1]]
-    if valid_pos?(map, down)
+    if valid_pos?(map, down) && valid_pos?(new_map, down)
         positions << down
     end
     right = [pos[0],pos[1] +1]
-    if valid_pos?(map, right)
+    if valid_pos?(map, right) && valid_pos?(new_map, down)
         positions << right
     end
-    up = [pos[0] -1,pos[1]]
+    up = [pos[0] -1,pos[1]] && valid_pos?(new_map, down)
     if valid_pos?(map, up)
         positions << up
     end
-    left = [pos[0],pos[1] -1]
+    left = [pos[0],pos[1] -1] && valid_pos?(new_map, down)
     if valid_pos?(map, left)
         positions << left
     end
