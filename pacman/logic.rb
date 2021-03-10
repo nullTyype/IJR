@@ -15,6 +15,7 @@ def find_hero(map)
             return [line,hero_column]
         end
     end
+    nil
 end
 
 def compute_new_pos(hero, direction)
@@ -113,6 +114,11 @@ def play(name)
         map[new_pos[0]] [new_pos[1]] = "H"
 
         map = move_ghosts(map)
+
+        if !find_hero(map)
+            game_over
+            break
+        end
     end
 end
 
