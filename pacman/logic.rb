@@ -60,15 +60,15 @@ def valid_pos_from(map, new_map, pos)
         positions << down
     end
     right = [pos[0],pos[1] +1]
-    if valid_pos?(map, right) && valid_pos?(new_map, down)
+    if valid_pos?(map, right) && valid_pos?(new_map, right)
         positions << right
     end
     up = [pos[0] -1,pos[1]]
-    if valid_pos?(map, up) && valid_pos?(new_map, down)
+    if valid_pos?(map, up) && valid_pos?(new_map, up)
         positions << up
     end
     left = [pos[0],pos[1] -1]
-    if valid_pos?(map, left) && valid_pos?(new_map, down)
+    if valid_pos?(map, left) && valid_pos?(new_map, left)
         positions << left
     end
     positions
