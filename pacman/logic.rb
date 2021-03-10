@@ -100,6 +100,15 @@ def move_ghosts(map)
     new_map
 end
 
+def player_lose?
+    lost = !find_hero(map)
+end
+
+def game_over
+    "\n\n\n\n\n\n"
+    "Game Over"
+end
+
 def play(name)
     map = read_map(2)
     while true
@@ -115,7 +124,7 @@ def play(name)
 
         map = move_ghosts(map)
 
-        if !find_hero(map)
+        if player_lose?(map)
             game_over
             break
         end
