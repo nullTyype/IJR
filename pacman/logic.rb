@@ -50,7 +50,7 @@ def valid_pos?(map, pos)
 end
 
 def copy_map(map)
-    new_map = map.join("\n").tr("F", " ").split("\n") 
+    new_map = map.join("\n").tr("F", " ").split("\n")
 end
 
 def valid_pos_from(map, new_map, pos)
@@ -63,12 +63,12 @@ def valid_pos_from(map, new_map, pos)
     if valid_pos?(map, right) && valid_pos?(new_map, down)
         positions << right
     end
-    up = [pos[0] -1,pos[1]] && valid_pos?(new_map, down)
-    if valid_pos?(map, up)
+    up = [pos[0] -1,pos[1]]
+    if valid_pos?(map, up) && valid_pos?(new_map, down)
         positions << up
     end
-    left = [pos[0],pos[1] -1] && valid_pos?(new_map, down)
-    if valid_pos?(map, left)
+    left = [pos[0],pos[1] -1]
+    if valid_pos?(map, left) && valid_pos?(new_map, down)
         positions << left
     end
     positions
@@ -97,6 +97,7 @@ def move_ghosts(map)
             end 
         end
     end
+    new_map
 end
 
 def play(name)
@@ -112,7 +113,7 @@ def play(name)
         map[hero[0]] [hero[1]] = " "
         map[new_pos[0]] [new_pos[1]] = "H"
 
-        move_ghosts(map)
+        map = move_ghosts(map)
     end
 end
 
