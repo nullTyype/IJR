@@ -21,20 +21,6 @@ def find_hero(map)
     nil
 end
 
-def compute_new_pos(hero, direction)
-    hero = hero.dup
-    moviments = {
-        "W" => [-1, 0],
-        "S" => [1, 0],
-        "A" => [0, -1],
-        "D" => [0, 1]
-    }
-    moviment = moviments[direction]
-    hero.line += moviment[0]
-    hero.column += moviment[1]
-    hero
-end
-
 def valid_pos?(map, pos)
     lines = map.size
     columns = map[0].size
@@ -118,12 +104,12 @@ def play(name)
         draw(map)
         direction = require_move.upcase
         hero = find_hero(map)
-        new_pos = compute_new_pos(hero, direction)
-        if !valid_pos?(map, new_pos)
+        new_pos = hero.compute_new_pos(direction)
+        if !valid_pos?(map, new_pos.to_array)
             next
         end
         map[hero.line] [hero.column] = " "
-        map[new_pos[0]] [new_pos[1]] = "H"
+        map[new_pos.line] [new_pos.column] = "H"
 
         map = move_ghosts(map)
 
