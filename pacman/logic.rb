@@ -76,7 +76,10 @@ def move_ghost(map, new_map, line, column)
     if positions.empty?
         return
     end
-    pos = positions[0]
+
+    random = rand(positions.size)
+
+    pos = positions[random]
 
     map[line][column] = " "
     new_map[pos[0]][pos[1]] = "F"
