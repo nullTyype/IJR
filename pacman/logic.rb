@@ -30,8 +30,8 @@ def compute_new_pos(hero, direction)
         "D" => [0, 1]
     }
     moviment = moviments[direction]
-    hero[0] += moviment[0]
-    hero[1] += moviment[1]
+    hero.line += moviment[0]
+    hero.column += moviment[1]
     hero
 end
 
@@ -122,7 +122,7 @@ def play(name)
         if !valid_pos?(map, new_pos)
             next
         end
-        map[hero[0]] [hero[1]] = " "
+        map[hero.line] [hero.column] = " "
         map[new_pos[0]] [new_pos[1]] = "H"
 
         map = move_ghosts(map)
