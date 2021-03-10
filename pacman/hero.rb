@@ -17,4 +17,12 @@ class Hero
     def to_array
         [line, column]
     end
+
+    def remove_to(map)
+        map[line][column] = " "
+    end
+    
+    def add_to(map)
+        map[line][column] = "H"
+    end
 end
