@@ -54,6 +54,7 @@ def copy_map(map)
 end
 
 def valid_pos_from(map, new_map, pos)
+    positions = []
     moviments = [[-1,0], [0,+1], [+1,0], [0,-1]]
     moviments.each do |moviment|
         new_pos = [pos[0]+moviment[0], pos[1]+moviment[1]]
