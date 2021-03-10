@@ -53,11 +53,15 @@ def copy_map(map)
     new_map = map.join("\n").tr("F", " ").split("\n")
 end
 
+def sum(vector1,vector2)
+    [vector1[0]+vector2[0], vector1[1]+vector2[1]]
+end
+
 def valid_pos_from(map, new_map, pos)
     positions = []
     moviments = [[-1,0], [0,+1], [+1,0], [0,-1]]
     moviments.each do |moviment|
-        new_pos = [pos[0]+moviment[0], pos[1]+moviment[1]]
+        new_pos = sum(pos, moviment)
         if valid_pos?(map, new_pos) && valid_pos?(new_map, new_pos)
             positions << new_pos
         end
