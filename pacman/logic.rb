@@ -55,9 +55,11 @@ end
 
 def valid_pos_from(map, new_map, pos)
     moviments = [[-1,0], [0,+1], [+1,0], [0,-1]]
-    moviment.each do |moviment|
+    moviments.each do |moviment|
         new_pos = [pos[0]+moviment[0], pos[1]+moviment[1]]
         if valid_pos?(map, new_pos) && valid_pos?(new_map, new_pos)
+            positions << new_pos
+        end
     end
 
     positions
