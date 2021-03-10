@@ -108,8 +108,6 @@ def play(name)
         if !valid_pos?(map, new_pos.to_array)
             next
         end
-        map[hero.line] [hero.column] = " "
-        map[new_pos.line] [new_pos.column] = "H"
 
         map = move_ghosts(map)
 
@@ -117,6 +115,9 @@ def play(name)
             game_over
             break
         end
+
+        hero.remove_to(map)
+        new_pos.add_to(map)
     end
 end
 
