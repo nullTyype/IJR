@@ -54,23 +54,12 @@ def copy_map(map)
 end
 
 def valid_pos_from(map, new_map, pos)
-    positions = []
-    down = [pos[0]+1,pos[1]]
-    if valid_pos?(map, down) && valid_pos?(new_map, down)
-        positions << down
+    moviments = [[-1,0], [0,+1], [+1,0], [0,-1]]
+    moviment.each do |moviment|
+        new_pos = [pos[0]+moviment[0], pos[1]+moviment[1]]
+        if valid_pos?(map, new_pos) && valid_pos?(new_map, new_pos)
     end
-    right = [pos[0],pos[1] +1]
-    if valid_pos?(map, right) && valid_pos?(new_map, right)
-        positions << right
-    end
-    up = [pos[0] -1,pos[1]]
-    if valid_pos?(map, up) && valid_pos?(new_map, up)
-        positions << up
-    end
-    left = [pos[0],pos[1] -1]
-    if valid_pos?(map, left) && valid_pos?(new_map, left)
-        positions << left
-    end
+
     positions
 end
 
