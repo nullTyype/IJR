@@ -100,13 +100,13 @@ def move_ghosts(map)
     new_map
 end
 
-def player_lose?
+def player_lose?(map)
     lost = !find_hero(map)
 end
 
 def game_over
-    "\n\n\n\n\n\n"
-    "Game Over"
+    puts "\n\n\n\n\n\n"
+    puts "Game Over"
 end
 
 def play(name)
