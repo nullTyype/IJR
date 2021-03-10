@@ -1,4 +1,5 @@
 require_relative "ui"
+require_relative "hero"
 
 def read_map(number)
     archive = "map#{number}.txt"
@@ -12,7 +13,9 @@ def find_hero(map)
         current_line = map[line]
         hero_column = current_line.index(hero)
         if hero_column
-            return [line,hero_column]
+            hero = Hero.new
+            hero.line = line
+            hero.column = hero_column
         end
     end
     nil
