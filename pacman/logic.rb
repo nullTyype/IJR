@@ -8,10 +8,10 @@ def read_map(number)
 end
 
 def find_hero(map)
-    hero = "H"
+    hero_char = "H"
     map.each_with_index do |current_line, line|
         current_line = map[line]
-        hero_column = current_line.index(hero)
+        hero_column = current_line.index(hero_char)
         if hero_column
             hero = Hero.new
             hero.line = line
@@ -111,13 +111,15 @@ def play(name)
 
         map = move_ghosts(map)
 
+        puts hero
+        puts new_pos
+        hero.remove_to(map)
+        new_pos.add_to(map)
+
         if player_lose?(map)
             game_over
             break
         end
-
-        hero.remove_to(map)
-        new_pos.add_to(map)
     end
 end
 
