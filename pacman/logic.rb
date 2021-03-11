@@ -16,6 +16,7 @@ def find_hero(map)
             hero = Hero.new
             hero.line = line
             hero.column = hero_column
+            return hero
         end
     end
     nil
@@ -111,15 +112,14 @@ def play(name)
 
         map = move_ghosts(map)
 
-        puts hero
-        puts new_pos
-        hero.remove_to(map)
-        new_pos.add_to(map)
-
         if player_lose?(map)
             game_over
             break
         end
+
+        hero.remove_to(map)
+        new_pos.add_to(map)
+
     end
 end
 
