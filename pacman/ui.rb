@@ -1,10 +1,10 @@
 def welcome
     puts "Welcome to Pacman's game"
     puts "Your name is? "
-    name = "defaultUser"
-    puts "\n\n\n\n"
+    name = gets()
+    puts "\n\n"
     puts "The game is starting #{name}"
-    sleep 0.3
+    sleep 0.4
     name
 end
 
