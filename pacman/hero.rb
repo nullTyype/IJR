@@ -1,4 +1,4 @@
-class Hero
+class Hero #creation of Hero properties
     attr_accessor :line, :column
     def compute_new_pos(direction)
         hero = self.dup
@@ -18,11 +18,11 @@ class Hero
         [line, column]
     end
 
-    def remove_to(map)
+    def remove_to(map) #movement pattern
         map[line][column] = " "
     end
     
-    def add_to(map)
+    def add_to(map) #movement pattern
         map[line][column] = "H"
     end
 end
