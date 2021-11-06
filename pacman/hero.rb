@@ -22,7 +22,7 @@ class Hero #creation of Hero properties
         map[line][column] = " "
     end
     
-    def add_to(map) #movement pattern
+    def add_to(map)
         map[line][column] = "H"
     end
 end
