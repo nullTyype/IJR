@@ -16,7 +16,7 @@ end
 def verifica_se_esta_vazio(palavra_secreta, todas_as_palavras)
     while palavra_secreta.to_s.length == 0
         palavra_secreta = gerar_palavra_secreta(todas_as_palavras)
-        puts palavra_secreta
+        #puts palavra_secreta
     end
     palavra_secreta
 end
@@ -89,7 +89,7 @@ def joga(nome)
         end
     end
     
-    if erros >= 5
+    if erros = 5
         perdeu(palavra_secreta)
     else
         @vezes_acertou+=1
