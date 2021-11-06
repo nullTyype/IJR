@@ -29,15 +29,15 @@ def desenha_forca(erros)
         pernas = ' // \ '
     end
 
-    puts " _______ "
-    puts " |/     | "
+    puts " _______        "
+    puts " |/     |       "
     puts " |    #{cabeca} "
     puts " |    #{bracos} "
-    puts " |    #{corpo} "
+    puts " |    #{corpo}  "
     puts " |    #{pernas} "
-    puts " | "
-    puts "_|___ "
-    puts ""
+    puts " |              "
+    puts "_|___           "
+    puts "                "
 end
 
 def sorteia_palavra_secreta
@@ -141,7 +141,7 @@ puts "    | |             | |      "
 puts "    |  I I I I I I I  |      "
 puts "    |   I I I I I I   |      "
 puts "    \\_              _/      "
-puts "     \\_           _/       "
-puts "       \\______   _/        "
+puts "     \\_           _/        "
+puts "       \\______   _/         "
 
 end
