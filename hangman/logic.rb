@@ -67,6 +67,14 @@ def joga(nome)
         chute = pede_um_chute_valido(chutes, erros, mascara)
         chutes << chute
 
+        if mascara == palavra_secreta
+            pontos_ate_agora +=100
+            puts "parabens voce acertou!" 
+            puts mascara
+            puts palavra_secreta
+            break
+        end
+
         chutou_uma_unica_letra = chute.size == 1          
         if chutou_uma_unica_letra
             total_encontrado = palavra_secreta.count(chute[0])
@@ -112,7 +120,7 @@ def jogo_da_forca
 
     loop do 
         pontos_totais += joga(nome)
-        #game loop end
+        #joga func end
         avisa_pontos_totais(pontos_totais)
         if le_rank[1].to_i < pontos_totais
             if le_rank[0] != nome
