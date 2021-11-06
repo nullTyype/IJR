@@ -96,7 +96,6 @@ def joga(nome)
         @vezes_acertou+=1
         puts "Você acertou #{@vezes_acertou} #{@vezes_acertou>1? "vezes" : "vez"}."
     end 
-    #avisa_pontos(pontos_ate_agora)
     pontos_ate_agora
 end
 
