@@ -49,7 +49,6 @@ def palavra_mascarada(chutes, palavra_secreta, mascara)
         end
         i+=1
     end
-
     mascara
 end
 
@@ -63,10 +62,19 @@ def joga(nome)
     pontos_ate_agora = 0
 
     while erros < 5
+        if mascara == palavra_secreta
+            pontos_ate_agora +=100
+            avisa_acertou_palavra
+            puts mascara
+            puts palavra_secreta
+            break
+        end
+
         mascara = palavra_mascarada(chutes, palavra_secreta, mascara)
         chute = pede_um_chute_valido(chutes, erros, mascara)
         chutes << chute
 
+=begin
         if mascara == palavra_secreta
             pontos_ate_agora +=100
             puts "parabens voce acertou!" 
@@ -74,6 +82,7 @@ def joga(nome)
             puts palavra_secreta
             break
         end
+=end
 
         chutou_uma_unica_letra = chute.size == 1          
         if chutou_uma_unica_letra
