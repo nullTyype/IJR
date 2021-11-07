@@ -79,7 +79,7 @@ def avisa_acertou_palavra
 
     puts "Parabéns, você ganhou!"
     puts "    ___________   "
-    puts " '  ._==_==_=_.'  "
+    puts "   '._==_==_=_.'  "
     puts "     .-\\: /-.    "
     puts "    | (|:. |) |   "
     puts "     '-|:. |-'    "
