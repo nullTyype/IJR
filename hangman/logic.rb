@@ -107,7 +107,7 @@ def joga(nome)
         end
     end
     
-    if erros >= 5
+    if erros == 5
         perdeu(palavra_secreta)
     else
         @vezes_acertou+=1
