@@ -16,7 +16,7 @@ end
 def verifica_se_esta_vazio(palavra_secreta, todas_as_palavras)
     while palavra_secreta.to_s.length == 0
         palavra_secreta = gerar_palavra_secreta(todas_as_palavras)
-        #puts palavra_secreta
+        puts palavra_secreta
     end
     palavra_secreta
 end
@@ -38,9 +38,7 @@ end
 
 def palavra_mascarada(chutes, palavra_secreta, mascara)
     chute = chutes[-1].to_s 
- 
     i = 0
-
     mascara.chars.each do
         if palavra_secreta[i] == chute 
             mascara[i] = chute
@@ -62,13 +60,14 @@ def joga(nome)
     pontos_ate_agora = 0
 
     while erros < 5
+        mascara = palavra_mascarada(chutes, palavra_secreta, mascara)
         if mascara == palavra_secreta
             pontos_ate_agora +=100
             avisa_acertou_palavra
             break
         end
 
-        mascara = palavra_mascarada(chutes, palavra_secreta, mascara)
+        #mascara = palavra_mascarada(chutes, palavra_secreta, mascara)
         chute = pede_um_chute_valido(chutes, erros, mascara)
         chutes << chute
 
