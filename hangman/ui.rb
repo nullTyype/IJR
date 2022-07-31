@@ -3,7 +3,7 @@ def da_boas_vindas
     puts "/* Jogo Da Forca */"
     puts "*******************"
     puts "Qual é o seu nome?"
-    nome = gets.strip
+    nome = "tester"
     puts "\n\n\n\n\n\n"
     puts "Começaremos o jogo para você, #{nome}."
     nome
@@ -75,7 +75,7 @@ def avisa_letra_encontrada (total_encontrado)
     puts "Letra encontrada #{total_encontrado} vezes."
 end
 
-def avisa_acertou_palavra
+def avisa_acertou_palavra(palavra_secreta)
 
     puts "Parabéns, você ganhou!"
     puts "    ___________   "
@@ -88,7 +88,7 @@ def avisa_acertou_palavra
     puts "        ) (       "
     puts "      _.' '._     "
     puts "     '-------'    "
-        
+    puts "A palavra secreta era #{palavra_secreta}"
 end
 
 def avisa_errou_palavra
