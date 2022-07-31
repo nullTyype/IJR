@@ -16,7 +16,6 @@ end
 def verifica_se_esta_vazio(palavra_secreta, todas_as_palavras)
     while palavra_secreta.to_s.length == 0
         palavra_secreta = gerar_palavra_secreta(todas_as_palavras)
-        #puts palavra_secreta
     end
     palavra_secreta
 end
@@ -38,9 +37,7 @@ end
 
 def palavra_mascarada(chutes, palavra_secreta, mascara)
     chute = chutes[-1].to_s 
- 
     i = 0
-
     mascara.chars.each do
         if palavra_secreta[i] == chute 
             mascara[i] = chute
@@ -49,7 +46,6 @@ def palavra_mascarada(chutes, palavra_secreta, mascara)
         end
         i+=1
     end
-
     mascara
 end
 
@@ -64,6 +60,12 @@ def joga(nome)
 
     while erros < 5
         mascara = palavra_mascarada(chutes, palavra_secreta, mascara)
+        if mascara == palavra_secreta
+            pontos_ate_agora +=100
+            avisa_acertou_palavra
+            break
+        end
+
         chute = pede_um_chute_valido(chutes, erros, mascara)
         chutes << chute
 
@@ -90,13 +92,12 @@ def joga(nome)
         end
     end
     
-    if erros >= 5
+    if erros == 5
         perdeu(palavra_secreta)
     else
         @vezes_acertou+=1
         puts "Você acertou #{@vezes_acertou} #{@vezes_acertou>1? "vezes" : "vez"}."
     end 
-    #avisa_pontos(pontos_ate_agora)
     pontos_ate_agora
 end
 
@@ -113,7 +114,7 @@ def jogo_da_forca
 
     loop do 
         pontos_totais += joga(nome)
-        #game loop end
+        #joga func end
         avisa_pontos_totais(pontos_totais)
         if le_rank[1].to_i < pontos_totais
             if le_rank[0] != nome
