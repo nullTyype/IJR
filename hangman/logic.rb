@@ -1,3 +1,4 @@
+#library requirement
 require_relative "ui"
 require_relative "rank"
 
@@ -81,7 +82,7 @@ def joga(nome)
         else
             acertou = chute == palavra_secreta
             if acertou
-                avisa_acertou_palavra
+                avisa_acertou_palavra(palavra_secreta)
                 pontos_ate_agora +=100
                 break
             else
