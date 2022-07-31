@@ -142,6 +142,6 @@ puts "    |  I I I I I I I  |      "
 puts "    |   I I I I I I   |      "
 puts "    \\_              _/      "
 puts "     \\_           _/        "
-puts "       \\______   _/         "
+puts "       \\__________/         "
 
 end
