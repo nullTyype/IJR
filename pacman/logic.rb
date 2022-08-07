@@ -100,7 +100,10 @@ def game_over
 end
 
 def play(name)
-    map = read_map(2)
+    map_message
+    choice = gets.chomp
+    choice.match(/number/)? :
+    map = read_map(choice)
     while true
         draw(map)
         direction = require_move.upcase
