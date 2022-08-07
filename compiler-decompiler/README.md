@@ -7,4 +7,3 @@ Simple program that compiles and decompiles a given text!
 - To decompile just run ``ruby decompiler.rb``, and your decompiled text will be shown at the console;
 
 Finally this is just a program to test a compiler and a decompiler logic; 
-Tips are very welcome!

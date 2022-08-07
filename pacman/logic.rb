@@ -100,7 +100,22 @@ def game_over
 end
 
 def play(name)
-    map = read_map(2)
+    map_message
+       
+    loop do 
+        @choice = gets.chomp
+        if !@choice.match(/[[:digit:]]/) 
+            notValidOption
+            next
+        else
+            break
+        end
+        @choice
+    end
+          
+    
+    
+    map = read_map(@choice)
     while true
         draw(map)
         direction = require_move.upcase
