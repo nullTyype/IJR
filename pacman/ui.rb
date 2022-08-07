@@ -16,3 +16,7 @@ def require_move
     puts "Where do you want to move?"
     move = gets.strip
 end
+
+def map_message
+    puts "Choose an map!"
+end
