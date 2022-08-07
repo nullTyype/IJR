@@ -1,7 +1,7 @@
 def welcome
     puts "Welcome to Pacman's game"
     puts "Your name is? "
-    name = gets()
+    name = "tester"
     puts "\n\n"
     puts "The game is starting #{name}"
     sleep 0.4
@@ -19,4 +19,8 @@ end
 
 def map_message
     puts "Choose an map!"
+end
+
+def notValidOption
+    puts "The map must be an valid number!"
 end
