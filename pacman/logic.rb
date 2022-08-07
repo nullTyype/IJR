@@ -101,9 +101,21 @@ end
 
 def play(name)
     map_message
-    choice = gets.chomp
-    choice.match(/number/)? :
-    map = read_map(choice)
+       
+    loop do 
+        @choice = gets.chomp
+        if !@choice.match(/[[:digit:]]/) 
+            notValidOption
+            next
+        else
+            break
+        end
+        @choice
+    end
+          
+    
+    
+    map = read_map(@choice)
     while true
         draw(map)
         direction = require_move.upcase
