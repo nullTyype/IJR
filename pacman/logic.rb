@@ -100,8 +100,9 @@ def game_over
 end
 
 def play(name)
-    map_message
-       
+
+    #choose map
+    map_message     
     loop do 
         @choice = gets.chomp
         if !@choice.match(/[[:digit:]]/) 
@@ -111,11 +112,10 @@ def play(name)
             break
         end
         @choice
-    end
-          
-    
-    
+    end         
     map = read_map(@choice)
+
+    #game init
     while true
         draw(map)
         direction = require_move.upcase
@@ -127,13 +127,16 @@ def play(name)
 
         map = move_ghosts(map)
 
+        hero.remove_to(map)
+        new_pos.add_to(map)
+
         if player_lose?(map)
             game_over
             break
         end
 
-        hero.remove_to(map)
-        new_pos.add_to(map)
+        #hero.remove_to(map)
+        #new_pos.add_to(map)
 
     end
 end
