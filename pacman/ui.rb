@@ -18,7 +18,11 @@ def require_move
 end
 
 def map_message
-    puts "Choose an map!"
+    puts "Choose an map! \n\n"
+end
+
+def choosen_map(choice) 
+    puts "You're now playing at map #{choice}! \n\n"
 end
 
 def notValidOption
