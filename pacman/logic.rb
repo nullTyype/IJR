@@ -113,6 +113,7 @@ def play(name)
         end
         @choice
     end         
+    choosen_map(@choice)
     map = read_map(@choice)
 
     #game init
