@@ -21,11 +21,13 @@ def atm(storage)
         end
         i+=1
     end
-    puts "Your change is #{change} \n\n"
+    puts "================================="
+    puts "\n\nYour change is #{change} \n\n"
 end
 
 storage = [[100, 1],[50, 2],[20, 4],[10, 8],[5, 16],[1, 32]]
 
+puts "Welcome, our current storage is #{storage} \n\n"
 loop do 
     atm(storage)
     puts "Our current storage is #{storage} \n\n"
