@@ -1,11 +1,11 @@
-def welcome(storage)
+def option(storage)
     puts "Write a value to be drawed: "
     value = gets.to_i
     value
 end
 
 def atm(storage)
-    value = welcome(storage)
+    value = option(storage)
     change = []
     i = 0
 
@@ -16,13 +16,14 @@ def atm(storage)
                 storage[i][1] -= 1
                 change << storage[i][0]
             else
-                puts "You exceeded the max value"
+                puts "We don't have infinity money! (or so?)"
             end
         end
         i+=1
     end
-    puts "================================="
-    puts "\n\nYour change is #{change} \n\n"
+    puts "\n\n======================="
+    puts "Your change is #{change}"
+    puts "=======================\n\n"
 end
 
 storage = [[100, 1],[50, 2],[20, 4],[10, 8],[5, 16],[1, 32]]
