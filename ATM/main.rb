@@ -16,7 +16,7 @@ def atm(storage)
                 storage[i][1] -= 1
                 change << storage[i][0]
             else
-                puts "We don't have infinity money! (or so?)"
+                puts "We don't have infinity money! (or so?)" ## FIX THIS
             end
         end
         i+=1
