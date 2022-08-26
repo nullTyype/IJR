@@ -1,6 +1,6 @@
 def option(storage)
     puts "Write a value to be drawed: "
-    value = gets.to_i
+    value = gets.chomp
     value
 end
 
@@ -10,7 +10,7 @@ def atm(storage)
     i = 0
 
     while value > 0
-        while value - storage[i][0] >= 0 && storage[i][1] > 0
+        while value - storage[i][0] >= 0 && storage[i][1] > 0 && value.match(/:digit:/)
             if storage[i][1] - 1 >= 0
                 value -= storage[i][0]
                 storage[i][1] -= 1
