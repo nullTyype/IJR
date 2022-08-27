@@ -49,7 +49,7 @@ def totalCapacity
     total
 end
 
-def init 
+def init
     loop do 
         atm(storage)
         current_storage
