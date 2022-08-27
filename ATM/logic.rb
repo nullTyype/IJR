@@ -3,8 +3,6 @@ require_relative "ui.rb"
 
 ## basic atm func
 
-storage = [[100, 1],[50, 2],[20, 4],[10, 8],[5, 16],[1, 32]]
-
 def option(storage)
     request_value
     value = gets.to_i
@@ -49,9 +47,13 @@ def totalCapacity
     total
 end
 
+## loop def
+
 def init
+    storage = [[100, 1],[50, 2],[20, 4],[10, 8],[5, 16],[1, 32]]
+    welcome_msg(storage)
     loop do 
         atm(storage)
-        current_storage
+        current_storage(storage)
     end    
 end
