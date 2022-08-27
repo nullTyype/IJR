@@ -48,3 +48,10 @@ def totalCapacity
     end
     total
 end
+
+def init 
+    loop do 
+        atm(storage)
+        current_storage
+    end    
+end

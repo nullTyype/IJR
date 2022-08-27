@@ -15,3 +15,7 @@ end
 def request_value
     puts "Write a value to be drawed: "
 end
+
+def current_storage(storage)
+    puts "Our current storage is #{storage} \n\n"
+end
