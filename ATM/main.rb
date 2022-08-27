@@ -1,3 +1,5 @@
+require_relative 'logic.rb'
+
 def option(storage)
     puts "Write a value to be drawed: "
     value = gets.to_i
