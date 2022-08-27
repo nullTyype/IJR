@@ -2,8 +2,7 @@ require_relative 'logic.rb'
 require_relative 'ui.rb'
 
 
-welcome(storage)
-
+welcome_msg(storage)
 
 ## loop start
 

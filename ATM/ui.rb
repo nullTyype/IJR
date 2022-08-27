@@ -1,4 +1,4 @@
-def welcome(storage)
+def welcome_msg(storage)
     puts "Welcome, our current storage is #{storage} \n\n"
 end
 
