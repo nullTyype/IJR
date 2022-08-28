@@ -20,14 +20,14 @@ def current_storage(storage)
     puts "Our current storage is #{storage} \n\n"
 end
 
-def maxExchangeValue(value)
-    puts "Our total value avaliable to be drawed is #{value}"
+def currentExchange(totalCapacity)
+    puts "Our available value is #{totalCapacity}."
 end
 
-def notEnoughMoney(totalCapacity)
-    puts "We don't have infinity money!, Please choose an value lower than #{totalCapacity}"
+def notEnoughMoney
+    puts "We don't have infinity money! Please choose an value lower than the current value!"
 end
 
-def outOfMoney
-    puts "We're actually out of money come back later! (better run it again)"
+def noMoney
+    "You went beyond the available value"
 end
