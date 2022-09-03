@@ -7,9 +7,9 @@ def advice_msg
 end
 
 def change_msg(change)
-    puts "\n\n======================="
+    puts "\n\n========================================="
     puts "Your change is #{change}"
-    puts "=======================\n\n"
+    puts "=========================================\n\n"
 end
 
 def request_value
@@ -21,7 +21,7 @@ def current_storage(storage)
 end
 
 def currentExchange(totalCapacity)
-    puts "Our available value is #{totalCapacity}."
+    puts "Our available value is #{totalCapacity}.\n\n"
 end
 
 def notEnoughMoney
