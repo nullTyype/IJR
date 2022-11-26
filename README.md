@@ -1,3 +1,3 @@
 # From logic to Ruby Games
 
-Exercises from Guilherme Silveira's ruby logic EBook;
+Exercises from Guilherme Silveira's ruby logic book;
