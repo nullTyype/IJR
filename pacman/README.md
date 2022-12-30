@@ -2,7 +2,7 @@
 
 An terminal PacMan based game;
 
->To test just run "ruby main.rb/"
+>To test: "ruby main.rb/" at console;
 
 #### Ruby: Version 3.0.2
 
