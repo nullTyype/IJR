@@ -1,0 +1,18 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ast (2.4.2)
+    opal (1.7.0)
+      ast (>= 2.3.0)
+      parser (~> 3.0, >= 3.0.3.2)
+    parser (3.2.0.0)
+      ast (~> 2.4.1)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  opal
+
+BUNDLED WITH
+   2.3.12
