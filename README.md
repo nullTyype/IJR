@@ -1,3 +1,3 @@
 # From logic to ruby games
 
-Challenges from Guilherme Silveira's ruby logic book;
+Challenges from GS's ruby logic book;
