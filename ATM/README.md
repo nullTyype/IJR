@@ -1,4 +1,5 @@
 # ATM
 
 ATM machine logic;
->to test just run ruby main.rb on shell;
+To test: "ruby ./main.rb" at console;
+[x] Ruby Version: 3.0.2;
