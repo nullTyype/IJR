@@ -1,5 +1,5 @@
 # ATM
 
-ATM machine logic;
-To test: "ruby ./main.rb" at console;
+ATM machine logic;\b
+To test: "ruby ./main.rb" at console;\b
 [x] Ruby Version: 3.0.2;
