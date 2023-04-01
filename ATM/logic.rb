@@ -12,7 +12,7 @@ def verifyValue(totalCapacity, value, storage)
     end
 end
 
-#### total storage capacity storage
+#### total storage capacity
 
 def maxCapacity(storage)
     i = 0
