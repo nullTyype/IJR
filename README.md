@@ -1,3 +1,3 @@
-# From logic to ruby games
+# From Logic to Ruby Games
 
-Challenges from GS's ruby logic book;
+Challenges from GS's Ruby Logic Book;
